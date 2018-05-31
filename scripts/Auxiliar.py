@@ -19,7 +19,7 @@ def getCSVFiles(path):
     return [file for file in nonOcultedFiles(path, True) if getFileExtension(file) == ".csv"]
 
 def getNonCSVFiles(path):
-    return [file for file in nonOcultedFiles(path, True) if not (getFileExtension(file) == ".csv")]
+    return [file for file in nonOcultedFiles(path) if not (getFileExtension(file) == ".csv")]
 
 def getFileExtension(fileName):
     return os.path.splitext(fileName)[-1].lower()

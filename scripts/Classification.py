@@ -7,10 +7,8 @@ import joblib
 from sklearn import svm
 import Auxiliar as aux
 
-def classification():
-    classificationModelsPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/models/classification"
-    clusteringModelsPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/models/clustering"
-    datasetPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/dataset"
+def classification(datasetPath, clusteringModelsPath, classificationModelsPath):
+
     numberOfImages = aux.getDatasetSize(datasetPath)
     numberOfCategories = aux.getDatasetNumberOfCategories(datasetPath)
     actualImage = 1

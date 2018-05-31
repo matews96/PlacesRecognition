@@ -1,8 +1,7 @@
 import os
 import Auxiliar as aux
 
-def dataOrganization():
-    datasetPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/dataset"
+def dataOrganization(datasetPath):
 
     for directoryIndex, directoryName in enumerate(aux.nonOcultedFiles(datasetPath)):
         for imageIndex, imageName in enumerate(aux.getNonCSVFiles(os.path.join(datasetPath, directoryName))):

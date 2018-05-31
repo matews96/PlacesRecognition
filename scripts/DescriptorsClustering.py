@@ -3,8 +3,7 @@ import os
 from sklearn.cluster import MiniBatchKMeans
 import joblib
 
-def descriptorsClustering():
-    clusteringModelsPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/models/clustering"
+def descriptorsClustering(clusteringModelsPath):
 
     print("###################Descriptors Clustering Started##########################")
     print("Loading Data......")

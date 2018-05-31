@@ -4,10 +4,10 @@ import cv2
 import Auxiliar as aux
 
 
-def descriptorsExtraction():
-    datasetPath = "/Users/Mateo/PycharmProjects/PlacesRecognition/dataset"
+def descriptorsExtraction(datasetPath):
 
-    sift = cv2.xfeatures2d.SIFT_create()
+    sift = cv2.xfeatures2d.SURF_create()
+    sift.setExtended(True)
 
     numberOfImages = aux.getDatasetSize(datasetPath)
     numberOfCategories = aux.getDatasetNumberOfCategories(datasetPath)
