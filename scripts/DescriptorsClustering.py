@@ -7,7 +7,7 @@ def descriptorsClustering(clusteringModelsPath):
 
     print("###################Descriptors Clustering Started##########################")
     print("Loading Data......")
-    df = dd.read_csv("/Users/Mateo/PycharmProjects/PlacesRecognition/dataset/*/agora_0.csv", **{'header': None})
+    df = dd.read_csv("/Users/mateo.echeverri/PycharmProjects/PlacesRecognition/dataset/*/*.csv", **{'header': None})
 
     modelCenters = [150, 200, 300]
 

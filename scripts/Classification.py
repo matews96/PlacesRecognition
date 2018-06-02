@@ -45,4 +45,3 @@ def classification(datasetPath, clusteringModelsPath, classificationModelsPath):
         joblib.dump(classificationModel, classificationModelsPath + "/svm_" + str(centersNumber) + ".pkl")
 
     print("###################clasification model generated##########################")
-

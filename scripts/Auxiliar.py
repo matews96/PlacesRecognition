@@ -19,7 +19,7 @@ def getCSVFiles(path):
     return [file for file in nonOcultedFiles(path, True) if getFileExtension(file) == ".csv"]
 
 def getNonCSVFiles(path):
-    return [file for file in nonOcultedFiles(path) if not (getFileExtension(file) == ".csv")]
+    return [file for file in nonOcultedFiles(path, True) if not (getFileExtension(file) == ".csv")]
 
 def getFileExtension(fileName):
     return os.path.splitext(fileName)[-1].lower()
@@ -34,6 +34,8 @@ def changeFileExtension(fileName, newExtension):
 def getImageNumber(fileName):
     return int(removeFileExtension(fileName).split("_")[1])
 
+def getImageName(fileName):
+    return removeFileExtension(fileName).split("_")[0]
+
 def getFileName(path):
     return path.split("/")[-1]
-
