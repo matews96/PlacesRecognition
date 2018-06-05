@@ -6,8 +6,10 @@ import Auxiliar as aux
 
 def descriptorsExtraction(datasetPath):
 
-    sift = cv2.xfeatures2d.SURF_create()
-    sift.setExtended(True)
+    surf = cv2.xfeatures2d.SURF_create()
+    surf.setExtended(True)
+
+    sift = cv2.xfeatures2d.SIFT_create()
 
     numberOfImages = aux.getDatasetSize(datasetPath)
     numberOfCategories = aux.getDatasetNumberOfCategories(datasetPath)

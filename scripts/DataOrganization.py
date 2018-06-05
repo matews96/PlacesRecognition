@@ -3,7 +3,7 @@ import cv2
 import Auxiliar as aux
 import numpy as np
 
-def dataOrganization(datasetPath, evalPath):
+def dataOrganization(datasetPath, evalPath="a"):
     percentage = 20
     for directoryIndex, directoryName in enumerate(aux.nonOcultedFiles(datasetPath)):
 
@@ -16,8 +16,10 @@ def dataOrganization(datasetPath, evalPath):
             oldPath = os.path.join(datasetPath, directoryName, imageName)
             newPath = os.path.join(datasetPath, directoryName,
                                    directoryName + "_" + str(imageIndex) + extension)
-            if imageIndex in imagesToEvaluation:
-                newPath = os.path.join(evalPath, directoryName, directoryName + "_" + str(imageIndex) + extension)
+
+            # if imageIndex in imagesToEvaluation:
+            #     newPath = os.path.join(evalPath, directoryName, directoryName + "_" + str(imageIndex) + extension)
+            #     print(os.path.basename(oldPath) + " ------------> " + newPath)
 
             os.rename(oldPath, newPath)
 
@@ -29,3 +31,5 @@ def dataOrganization(datasetPath, evalPath):
                 img = cv2.resize(img, None, fx=1, fy=1, interpolation=cv2.INTER_AREA)
 
             cv2.imwrite(newPath, img, [int(cv2.IMWRITE_PNG_COMPRESSION), 9])
+
+dataOrganization("/Users/mateo.echeverri/downloads/Imagenes Reto 2")

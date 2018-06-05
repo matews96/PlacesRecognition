@@ -10,10 +10,10 @@ classificationModelsPath = "/Users/mateo.echeverri/PycharmProjects/PlacesRecogni
 
 
 def createModels():
-    DataOrganization.dataOrganization(datasetPath, evalPath)
-    #DescriptorsExtraction.descriptorsExtraction(datasetPath)
-    #DescriptorsClustering.descriptorsClustering(clusteringModelsPath)
-    #Classification.classification(datasetPath, clusteringModelsPath, classificationModelsPath)
+    #DataOrganization.dataOrganization(datasetPath, evalPath)
+    DescriptorsExtraction.descriptorsExtraction(datasetPath)
+    DescriptorsClustering.descriptorsClustering(clusteringModelsPath)
+    Classification.classification(datasetPath, clusteringModelsPath, classificationModelsPath)
 
 
 def main():

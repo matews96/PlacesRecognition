@@ -9,7 +9,7 @@ def descriptorsClustering(clusteringModelsPath):
     print("Loading Data......")
     df = dd.read_csv("/Users/mateo.echeverri/PycharmProjects/PlacesRecognition/dataset/*/*.csv", **{'header': None})
 
-    modelCenters = [150, 200, 300]
+    modelCenters = [150, 200, 300, 400, 500]
 
     for modelCenter in modelCenters:
         print(f"Creating and fitting model {modelCenter}x128...")
